@@ -1,30 +1,30 @@
 
-function getAge(birthday) {
-    const ageDifMs = Date.now() - new Date(birthday).getTime();
-    const ageDate = new Date(ageDifMs);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+// function getAge(birthday) {
+//     const ageDifMs = Date.now() - new Date(birthday).getTime();
+//     const ageDate = new Date(ageDifMs);
+//     return Math.abs(ageDate.getUTCFullYear() - 1970);
 
-}
+// }
 
 // to do: create var and print its value (25/june/23)
 //   var a= document.getElementById("shyam_age").innerHTML;
 //   console.log(a);
 // document.getElementById("shyam_id").innerHTML = getAge(a);
 
-let shyam_age = document.getElementById("shyam_age").innerHTML
-document.getElementById("shyam_id").innerHTML = getAge(shyam_age);
+// let shyam_age = document.getElementById("shyam_age").innerHTML
+// document.getElementById("shyam_id").innerHTML = getAge(shyam_age);
 
-let ram_age = document.getElementById("ram_age").innerHTML
+// let ram_age = document.getElementById("ram_age").innerHTML
 
-console.log(getAge(ram_age));
-document.getElementById("ram_id").innerHTML = getAge(ram_age);
+// console.log(getAge(ram_age));
+// document.getElementById("ram_id").innerHTML = getAge(ram_age);
 
-//    console.log(getAge("11/11/1984"));
+// //    console.log(getAge("11/11/1984"));
 
-//   console.log(getAge("11/11/1984"));
+// //   console.log(getAge("11/11/1984"));
 
-const Aman_dob= document.getElementById("Aman_dob").innerHTML
-document.getElementById("Aman_id").innerHTML=getAge(Aman_dob)
+// const Aman_dob= document.getElementById("Aman_dob").innerHTML
+// document.getElementById("Aman_id").innerHTML=getAge(Aman_dob)
 
 // const student_json = [{
 //     firstName: "ram",
@@ -56,4 +56,49 @@ document.getElementById("Aman_id").innerHTML=getAge(Aman_dob)
 // document.getElementById("my_table").innerHTML = studentHTML;
 
 
+var text = '<tr><th>Users Name</th><th>Age</th><th>Gender</th><th>Email</th></tr>';
+fetch('https://dummyjson.com/users')
+.then(res => res.json())
+.then((aaa) => {
+    console.log(aaa.users[0]);
+     for(i=0; i<aaa.users.length; i++){
+        //console.log(aaa.users[i]);
+       text += '  <tr>'+
+        '<td>'+aaa.users[i].firstName +' '+ aaa.users[i].lastName+'</td>'+
+        '<td id="ram_age" >' +aaa.users[i].age +'</td>'+
+        '<td>'+aaa.users[i].gender + '</td>'+
+        '<td>' +aaa.users[i].email + '</td>'+
+      '</tr>'; 
+      
+     }
+     console.log(text);
+     document.getElementById("my_table").innerHTML = text;
 
+}
+    
+    );
+
+
+
+//     var text = '';
+// fetch('https://dummyjson.com/users')
+// .then(res => res.json())
+// .then((aaa) => {
+//     console.log(aaa.users[0]);
+//      for(i=0; i<aaa.users.length; i++){
+//         //console.log(aaa.users[i]);
+//        text += '  <tr>'+
+//         '<td>'+aaa.users[i].firstName +' '+ aaa.users[i].lastName+'</td>'+
+//         '<td id="ram_age" >' +aaa.users[i].dateOfBirth +'</td>'+
+//         '<td>Maths</td>'+
+//         '<td id="ram_id"></td>'+
+//       '</tr>';
+
+      
+
+//       console.log(text);
+//      }
+
+//      document.getElementById("Users Data").innerHTML = (text);
+//  }
+// );

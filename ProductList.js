@@ -1,4 +1,4 @@
-var text = '<tr><th>Product id</th><th>Description</th><th>Price</th><th>Rating</th><th>Discount Percentage</th></tr>';
+var text = '<tr><th>Product id</th><th>Description</th><th>Price</th><th>Rating</th><th>Discount Percentage</th><th>Detail</th></tr>';
 fetch('https://dummyjson.com/products')
 .then(res => res.json())
 .then((b) => {
@@ -11,6 +11,7 @@ fetch('https://dummyjson.com/products')
         '<td>'+b.products[i].price + '</td>'+
         '<td>' +b.products[i].rating + '</td>'+
         '<td>' +b.products[i].discountPercentage + '</td>'+
+        '<td> <a href="productsDetail.html?id='+ b.products[i].id + '"> Detail</a></td>'+
       '</tr>';
 
       

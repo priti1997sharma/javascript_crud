@@ -5,7 +5,7 @@
         <!-- Latest compiled and minified CSS --> 
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" >
-
+<script src="productsDetails.js" ></script>
 
 <style>
 
@@ -25,19 +25,44 @@
 
     <body class="container">
       
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">User</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="productsList.html">Product List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="CommentsList.html">COMMENT List</a>
+                  </li>
+                              
+              </ul>
+              
+            </div>
+          </nav>
+
+          
         <div class="product-detail-outer" >
             <table class="product-detail-table table">
                 <tr> 
                     <td> Product Id</td> <td> 1</td>
                 </tr>
                 <tr>
-                    <td>Title</td> <td>iPhone 9</td>
+                    <td>Title</td> <td id="product_title"></td>
                 </tr>
                 <tr>
-                    <td>Description</td> <td>An apple mobile which is nothing like apple.</td>
+                    <td>Description</td> <td id="product_description">An apple mobile which is nothing like apple.</td>
                 </tr>
                 <tr>
-                    <td>Price</td> <td>60K</td>
+                    <td>Price</td> <td id="product_price">60K</td>
                 </tr>
                 <tr>
                     <td>Rating</td> <td>4.5</td>

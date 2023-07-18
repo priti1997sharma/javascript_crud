@@ -74,9 +74,7 @@ fetch('https://dummyjson.com/users')
      console.log(text);
      document.getElementById("my_table").innerHTML = text;
 
-}
-    
-    );
+});
 
 
 
@@ -102,3 +100,7 @@ fetch('https://dummyjson.com/users')
 //      document.getElementById("Users Data").innerHTML = (text);
 //  }
 // );
+
+fetch('http://127.0.0.1:8080/header.html')
+.then(res => res.text())
+.then(res => document.getElementById("header-bar").innerHTML = res)

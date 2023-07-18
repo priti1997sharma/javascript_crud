@@ -1,4 +1,4 @@
-var text = '<tr><th>Product id</th><th>Description</th><th>Price</th><th>Rating</th><th>Discount Percentage</th><th>Detail</th></tr>';
+var text = '<tr><th>Product id</th><th>Title</th><th>Description</th><th>Price</th><th>Rating</th><th>Discount Percentage</th><th>Detail</th></tr>';
 fetch('https://dummyjson.com/products')
 .then(res => res.json())
 .then((b) => {
@@ -6,7 +6,8 @@ fetch('https://dummyjson.com/products')
      for(i=0; i<b.products.length; i++){
         //console.log(b.products[i]);
        text += '  <tr>'+
-        '<td>'+b.products[i].id +' '+ b.products[i].title+'</td>'+
+        '<td>'+b.products[i].id +'</td>'+
+        '<td>'+b.products[i].title +'</td>'+
         '<td>' +b.products[i].description +'</td>'+
         '<td>'+b.products[i].price + '</td>'+
         '<td>' +b.products[i].rating + '</td>'+
@@ -24,3 +25,12 @@ fetch('https://dummyjson.com/products')
 }
     
     );
+
+    fetch("http://127.0.0.1:8080/header.html")
+    .then(res=> res.text())
+    .then(res=> {
+      console.log("shakti sharma")
+      console.log(res);
+
+      document.getElementById("header-bar").innerHTML=res;
+    })

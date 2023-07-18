@@ -28,4 +28,12 @@ fetch('https://dummyjson.com/comments')
     
     );
 
+    fetch('http://127.0.0.1:8080/header.html')
+    .then(res=>res.text())
+    .then(res=>{
+    
+        document.getElementById("header-bar").innerHTML=res;
+    })
+
+
     

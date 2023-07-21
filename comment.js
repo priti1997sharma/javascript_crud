@@ -1,4 +1,4 @@
-var text = '<tr><th>id</th><th>body</th><th>postId</th><th>id</th><th>username</th></tr>';
+var text = '<tr><th>id</th><th>body</th><th>postId</th><th>id</th><th>username</th><th>Comment Detail</th></tr>';
 
 fetch('https://dummyjson.com/comments')
 .then(res => {
@@ -14,7 +14,7 @@ fetch('https://dummyjson.com/comments')
         '<td>'+p.comments[i].postId + '</td>'+
         '<td>'+p.comments[i].user.id + '</td>'+
         '<td>'+p.comments[i].user.username + '</td>'+
-        // '<td> <a href="productsDetail.html?id='+ p.comments[i].id + '"> Detail</a></td>'+
+        '<td> <a href="commentDetail.html?id='+ p.comments[i].id + '"> Comment Detail</a></td>'+
       '</tr>';
 
       
